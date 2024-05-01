@@ -158,8 +158,10 @@ BicopSUR=function (Y1,X1,Y2,X2,Copula,type,rho,Lcop,Ucop){
 
 Eq1=lm(Y1~X1)
 Eq2=lm(Y2~X2)
+beta1init = c(coef(Eq1), sigma1 = sigma)
+beta2init = c(coef(Eq2), sigma2 = sigma)
 sigma=1
-v=5
+ v=5
  K1 = length(coef(Eq1))
     K2 = length(coef(Eq2))
     if (type == 1) {
