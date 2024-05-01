@@ -159,6 +159,7 @@ BicopSUR=function (Y1,X1,Y2,X2,Copula,type,rho,Lcop,Ucop){
 Eq1=lm(Y1~X1)
 Eq2=lm(Y2~X2)
 sigma=1
+<<<<<<< HEAD
 v=5
 beta1init=c(coef(Eq1),sigma1=sigma)
 beta2init=c(coef(Eq2),sigma2=sigma)
@@ -184,6 +185,34 @@ if (type == 4) {
   lower = c(rep(-Inf, K1), 1e-04,df=2.1, rep(-Inf, K2), 0.001, df=2.1,Lcop)
   upper = c(rep(Inf, K1), Inf,30, rep(Inf, K2), Inf,df=30, Ucop)
 }
+=======
+ v=5
+beta1init = c(coef(Eq1), sigma1 = sigma)
+beta2init = c(coef(Eq2), sigma2 = sigma)
+
+ K1 = length(coef(Eq1))
+    K2 = length(coef(Eq2))
+    if (type == 1) {
+        theta = c(beta1init, beta2init, rho = rho)
+    lower = c(rep(-Inf, K1), 1e-04, rep(-Inf, K2), 0.001, Lcop)
+    upper = c(rep(Inf, K1), Inf, rep(Inf, K2), Inf, Ucop)
+    }
+    if (type == 2) {
+        theta = c(beta1init, beta2init, df = v, rho = rho)
+    lower = c(rep(-Inf, K1), 1e-04, rep(-Inf, K2), 0.001,df=2.1, Lcop)
+    upper = c(rep(Inf, K1), Inf, rep(Inf, K2), Inf, 30,Ucop)
+    }
+    if (type == 3) {
+        theta = c(beta1init, df = v, beta2init, rho = rho)
+    lower = c(rep(-Inf, K1), 1e-04,df=2.1, rep(-Inf, K2), 0.001, Lcop)
+    upper = c(rep(Inf, K1), Inf,30, rep(Inf, K2), Inf, Ucop)
+    }
+    if (type == 4) {
+        theta = c(beta1init, df = v, beta2init, df = v, rho = rho)
+    lower = c(rep(-Inf, K1), 1e-04,df=2.1, rep(-Inf, K2), 0.001, df=2.1,Lcop)
+    upper = c(rep(Inf, K1), Inf,30, rep(Inf, K2), Inf,df=30, Ucop)
+    }
+>>>>>>> 8095cc66e6e1f56110b1d5b922ff86a8667ea128
 
 
 ## Step 3 ) change Copula, Type
