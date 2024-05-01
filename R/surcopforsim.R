@@ -211,7 +211,6 @@ beta2init = c(coef(Eq2), sigma2 = sigma)
     lower = c(rep(-Inf, K1), 1e-04,df=2.1, rep(-Inf, K2), 0.001, df=2.1,Lcop)
     upper = c(rep(Inf, K1), Inf,30, rep(Inf, K2), Inf,df=30, Ucop)
     }
->>>>>>> 8095cc66e6e1f56110b1d5b922ff86a8667ea128
 
 
 ## Step 3 ) change Copula, Type
