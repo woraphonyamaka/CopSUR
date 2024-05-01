@@ -184,7 +184,7 @@ if (type == 4) {
   lower = c(rep(-Inf, K1), 1e-04,df=2.1, rep(-Inf, K2), 0.001, df=2.1,Lcop)
   upper = c(rep(Inf, K1), Inf,30, rep(Inf, K2), Inf,df=30, Ucop)
 }
-=======
+
  v=5
 beta1init = c(coef(Eq1), sigma1 = sigma)
 beta2init = c(coef(Eq2), sigma2 = sigma)
