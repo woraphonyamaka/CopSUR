@@ -159,7 +159,6 @@ BicopSUR=function (Y1,X1,Y2,X2,Copula,type,rho,Lcop,Ucop){
 Eq1=lm(Y1~X1)
 Eq2=lm(Y2~X2)
 sigma=1
-<<<<<<< HEAD
 v=5
 beta1init=c(coef(Eq1),sigma1=sigma)
 beta2init=c(coef(Eq2),sigma2=sigma)
