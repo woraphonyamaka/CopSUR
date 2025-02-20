@@ -2,7 +2,7 @@
 \alias{surcopforsim}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Bivariate Copula based SUR
+Bivariate Copula based SUR model
 }
 \description{
 The maximum likelihood estimation for the Copula based SUR model. Several margins and copula functions are provided.
