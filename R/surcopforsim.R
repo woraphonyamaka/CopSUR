@@ -1,6 +1,6 @@
 
 # This is an  function named 'Bivariate Copula based Seemingly unrelated Regression'
-# Written by Dr.Worphon Yamaka,
+# Written by Assoc. Prof. Dr. Worphon Yamaka
 # Center of excellence in Econometrics, Faculty of Economics,
 # Chiang Mai University
 #
